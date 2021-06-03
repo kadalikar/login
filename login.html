@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login form</title>
+    <!-- <link  rel="stylesheet"  href="style.css"/> -->
+    <!-- <script defer src="page.js"></script> -->
+</head>
+<body>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+
+.login
+{
+    padding-top:350px;
+    padding-left:750px;
+    padding-right:0px;
+    padding-bottom:12px;
+}
+.cardd
+{
+    background: url('https://avengersbucketimg.s3.ap-south-1.amazonaws.com/l7.jpg') no-repeat;
+   
+    
+}
+ 
+#username
+{
+    padding: 8px;
+    width: 200px;
+}
+#password
+{
+    padding: 8px;
+    width: 200px;
+    
+}
+.button
+{
+    margin-top: 0px;
+    color: chocolate;
+    width: 85px;
+    height: 30px;
+    margin-left: 70px;
+}
+    </style>
+    <div class="cardd">
+    <form  onsubmit="return login()" action="home.html" class="login">
+        <input id="username" placeholder="username" type="text">
+        <label id="label" style="color: rgb(255, 51, 177);visibility: hidden;">please fill up the username</label>
+        <input id="password" placeholder="password" type="password">
+        <label id="label1" style="color: rgb(0, 195, 255);visibility: hidden;">please fill up the password</label>
+        <button class="button"  type="submit">Submit</button>
+    </form>
+</div>
+<script>
+    function login()
+{
+    const username = document.getElementById('username')
+    const password = document.getElementById('password')
+    const label = document.getElementById('label')
+    const label1 = document.getElementById('label1')
+    
+    if(username.value =="avengers" && password.value=="888888")
+    { 
+        return true;
+    }
+    else if(username.value.length< 9 && password.value<6)
+    {
+        username.style.border = "solid 5px red";
+        label.style.visibility = 'visible';
+        password.style.border = "solid 5px red";
+        label1.style.visibility = 'visible';
+        return false;   
+    }
+    else{
+        return false;
+    }
+     
+
+}
+</script>
+</body>
+</html>
