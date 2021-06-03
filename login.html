@@ -31,12 +31,12 @@
  
 #username
 {
-    padding: 15px;
+    padding: 20px;
     width: 210px;
 }
 #password
 {
-    padding: 15px;
+    padding: 20px;
     width: 210px;
     
 }
@@ -47,13 +47,13 @@
     font-weight:bold;
     width: 87px;
     height: 35px;
-    margin-left: 70px;
+    margin-left: 78px;
 }
     </style>
     <div class="cardd">
     <form  onsubmit="return login()" action="home.html" class="login">
         <input id="username" placeholder="username" type="text">
-        <label id="label" style="color: rgb(255, 51, 177);visibility: hidden;">please fill up the username</label>
+        <label id="label" style="color: rgb(0, 195, 255);visibility: hidden;">please fill up the username</label>
         <input id="password" placeholder="password" type="password">
         <label id="label1" style="color: rgb(0, 195, 255);visibility: hidden;">please fill up the password</label>
         <button class="button"  type="submit">Submit</button>
@@ -73,9 +73,9 @@
     }
     else if(username.value.length< 9 && password.value<6)
     {
-        username.style.border = "solid 5px red";
+        username.style.border = "solid 2px red";
         label.style.visibility = 'visible';
-        password.style.border = "solid 5px red";
+        password.style.border = "solid 2px red";
         label1.style.visibility = 'visible';
         return false;   
     }
